@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:ListDocumentVersions",
+                "ssm:StartAutomationExecution",
+                "ssm:DescribeDocument",
+                "ssm:DescribeDocumentParameters",
+                "ssm:GetDocument",
+                "ssm:DescribeDocumentPermission"
+            ],
+            "Resource": [
+                "arn:aws:ssm:*:*:document/DOCUMENT-NAME",
+                "arn:aws:ssm:*:*:automation-definition/DOCUMENT-NAME:$DEFAULT"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:DescribeAutomationExecutions",
+                "ssm:GetAutomationExecution",
+                "ssm:DescribeAutomationStepExecutions",
+                "ssm:ListDocuments"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
