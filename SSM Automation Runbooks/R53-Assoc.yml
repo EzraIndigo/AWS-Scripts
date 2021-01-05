@@ -1,4 +1,4 @@
-description: Associate VPC
+description: Associate VPC with an R53 hosted zone
 schemaVersion: '0.3'
 parameters:
   VPCID:
@@ -13,7 +13,7 @@ mainSteps:
     inputs:
       Service: route53
       Api: AssociateVPCWithHostedZone
-      HostedZoneId: /hostedzone/Z0220005387RG21TJAD9E
+      HostedZoneId: yourHostedZoneID
       VPC:
         VPCId: '{{VPCID}}'
         VPCRegion: '{{VPCRegion}}'
