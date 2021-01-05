@@ -1,0 +1,20 @@
+description: Associate VPC
+schemaVersion: '0.3'
+parameters:
+  VPCID:
+    type: String
+    description: ID of the VPC to Associate
+  VPCRegion:
+    type: String
+    description: Region of VPC
+mainSteps:
+  - name: AssociateVPC
+    action: 'aws:executeAwsApi'
+    inputs:
+      Service: route53
+      Api: AssociateVPCWithHostedZone
+      HostedZoneId: /hostedzone/Z0220005387RG21TJAD9E
+      VPC:
+        VPCId: '{{VPCID}}'
+        VPCRegion: '{{VPCRegion}}'
+    isEnd: true
