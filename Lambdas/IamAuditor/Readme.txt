@@ -13,6 +13,7 @@ IAM User Auditor for Organizations deployment. Generates JSON file with all IAM 
 
 
 Lambda Runtime Details:
+Python 3.6 but probably works on 2.7 with some tweaking 
 128MB of RAM should be enough, but runtime will vary depending on how many accounts you have. Tested with 17 accounts and takes around 18 seconds. I suggest deploying and tweaking RAM & Runtime based on your needs
 In my testing it used around 75MB of RAM 
 
