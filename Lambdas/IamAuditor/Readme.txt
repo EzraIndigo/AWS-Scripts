@@ -2,6 +2,8 @@ IAM User Auditor for Organizations deployment. Generates JSON file with all IAM 
 
 1.Create Lambda First & Role (Lambda Role needs minimum permissions to Org & S3 API)
 2.Update CF Template with the Lambda Role in the 'AssumeRolePolicyDocument'
+	2a. Update deployed Policy, it currently has 'iam:*' but it should be tuned to only iam:list-users or something similar
+	
 3.Create S3 bucket and update Lambda code with said bucket for JSON Upload
 4. Deploy CF via Stacksets into desired accounts:
 
